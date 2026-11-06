@@ -1,0 +1,98 @@
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #c9d8e0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+canvas {
+  display: block;
+  outline: none;
+  cursor: grab;
+}
+canvas:active {
+  cursor: grabbing;
+}
+
+.city-label {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.85), 0 1px 2px rgba(0, 0, 0, 0.6);
+  transform: translateY(-4px);
+}
+
+.status {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(10, 20, 28, 0.7);
+  color: #f3f4f6;
+  font-size: 13px;
+  pointer-events: none;
+}
+.status.warn {
+  top: 16px;
+  background: rgba(120, 70, 20, 0.8);
+}
+
+.flight-buttons {
+  position: fixed;
+  bottom: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 10px;
+  background: rgba(10, 20, 28, 0.6);
+  backdrop-filter: blur(6px);
+}
+.flight-buttons button {
+  font: inherit;
+  font-size: 14px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f3f4f6;
+  cursor: pointer;
+}
+.flight-buttons button:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+.flight-buttons button.active {
+  background: #c98f4a;
+  border-color: #e7b377;
+  color: #1b1208;
+}
+
+.hints,
+.attribution {
+  position: fixed;
+  left: 16px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+.hints {
+  bottom: 16px;
+  right: 16px;
+  left: auto;
+  text-align: right;
+}
+.attribution {
+  bottom: 16px;
+  left: 16px;
+  opacity: 0.75;
+}
